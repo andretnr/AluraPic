@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { PhotosModule } from './photos/photos.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AppRoutingModule } from './app.routing.module';
     PhotosModule,
     AppRoutingModule,
     ErrorsModule,
-    HomeModule
+    HomeModule,
+    CoreModule
 
   ],
   providers: [],
