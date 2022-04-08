@@ -3,11 +3,12 @@
       <a class="navbar-brand">ALURAPIC</a>
       <div *ngIf="(user$ | async) as user; else login">
           <i class="fa fa-user-circle"></i>
-          <a class="ms-2">{{ user.name }}</a>
+          <a class="ms-2 me-2">{{ user.name }}</a>
+          <a (click)="logout()">(Logout)</a>
       </div>
       <ng-template #login>
         <span class="navbar-text">
-            Please, login!
+          <a [routerLink]="['']" routerLinkActive="router-link-active" >  Please, login! </a>
         </span>
     </ng-template>
   </nav>
