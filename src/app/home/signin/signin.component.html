@@ -1,8 +1,8 @@
 <body class="form-signin">
   <main class="form-signin">
-    <h4 class="text-center h3 mt-4 mb-3 fw-normal">Login</h4>
+    <h4 class="text-center h3 mb-3 fw-normal">Login</h4>
 
-    <form [formGroup]="loginForm" class="form-floating mt-4 me-5 ms-5" (submit)="login()">
+    <form [formGroup]="loginForm" class="form-floating mt-4 " (submit)="login()">
       <div class="form-floating">
         <label for="userName"></label>
         <input #userNameInput
@@ -33,8 +33,8 @@
       </ap-vmessage>
       </div>
 
-      <button [disabled]="loginForm.invalid" type="submit" class="w-100 btn btn-lg btn-primary">login</button>
+      <button [disabled]="loginForm.invalid" type="submit" class="w-100 btn btn-lg btn-primary mt-2">login</button>
     </form>
   </main>
-  <p>Not a user?<a>Register now</a></p>
+  <p class="text-center mt-2">Not a user? <a [routerLink]="['signup']"> Register now</a></p>
 </body>
